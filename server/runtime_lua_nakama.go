@@ -5993,8 +5993,8 @@ func (n *RuntimeLuaNakamaModule) purchasesList(l *lua.LState) int {
 
 	l.Push(purchasesTable)
 
-	if purchases.Cursor != "" {
-		l.Push(lua.LString(purchases.Cursor))
+	if purchases.NextCursor != "" {
+		l.Push(lua.LString(purchases.NextCursor))
 	} else {
 		l.Push(lua.LNil)
 	}

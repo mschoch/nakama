@@ -2124,9 +2124,13 @@
           },
           "description": "Stored validated purchases."
         },
-        "cursor": {
+        "nextCursor": {
           "type": "string",
           "description": "The cursor to send when retrieving the next page, if any."
+        },
+        "prevCursor": {
+          "type": "string",
+          "description": "The cursor to send when retrieving the previous page, if any."
         }
       },
       "description": "A list of validated purchases stored by Nakama."

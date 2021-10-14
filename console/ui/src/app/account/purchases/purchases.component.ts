@@ -40,7 +40,7 @@ export class PurchasesComponent implements OnInit {
     this.userID = this.route.parent.snapshot.paramMap.get('id');
     this.route.data.subscribe(data => {
       this.purchases.push(...data[0].validated_purchases);
-      this.nextCursor = data[0].cursor;
+      this.nextCursor = data[0].next_cursor;
     });
   }
 
@@ -53,7 +53,7 @@ export class PurchasesComponent implements OnInit {
     ).subscribe(res => {
       this.purchases.push(...res.validated_purchases);
       this.purchasesRowsOpen.push(...Array(res.validated_purchases.length).fill(false));
-      this.nextCursor = res.cursor;
+      this.nextCursor = res.next_cursor;
     }, error => {
       this.error = error;
     });

@@ -4489,8 +4489,8 @@ func (n *runtimeJavascriptNakamaModule) purchasesList(r *goja.Runtime) func(goja
 
 		result := make(map[string]interface{}, 2)
 		result["validatedPurchases"] = validatedPurchases
-		if purchases.Cursor != "" {
-			result["cursor"] = purchases.Cursor
+		if purchases.NextCursor != "" {
+			result["cursor"] = purchases.NextCursor
 		}
 
 		return r.ToValue(result)

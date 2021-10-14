@@ -510,7 +510,8 @@ export interface ApiNotification {
 
 export interface ApiPurchaseList {
   validated_purchases?: ApiValidatedPurchase[]
-  cursor?: string
+  next_cursor?: string
+  prev_cursor?: string
 }
 
 export interface ApiReadStorageObjectId {
